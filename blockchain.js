@@ -1,22 +1,51 @@
 import {block} from './block.js';
 
-class blockchain{
+
+export class blockchain{
     constructor() {
-        this.chain = null;
-        this.difficulty = 3;
+        this.chain = [block.intialBlock];
+        this.difficulty = 2;
     }
     get(){
-        return this.blockchain;
+        return this.chain;
     }
 
-    lastestBlock(){
-        return this.blockchain[this.blockchain.length - 1];
+    getLastBlock(){
+        return this.chain[this.chain.length - 1];
     }
 
-    addBlock(block){
-        this.chain.push(block);        
+    addBlock(data){
+        this.chain.push(this.generateNextBlock(data));                
     }
+
+    calculateHash(blockindex, previousHash, data, timestamp){
+        return CryptoJS.SHA256(blockindex + previousHash + data + timestamp);
+    }
+
+    isValidHashDifficulty(hash) {
+        for (var i = 0; i < hash.length; i++) {
+          if (hash[i] !== "0") {
+            break;
+          }
+        }
+        return i >= this.difficulty;
+      }
+    generateNextBlock(data){
+        const previousBlock = this.getLastBlock();
+        var blockindex = previousBlock.blockindex+1;
+        var previousHash = previousBlock.hash;
+        var timestamp = Date.now().toString();
+        var hash = this.calculateHash(blockindex, previousHash, data, timestamp).toString();
+        var nonce = 0;
+        while (!this.isValidHashDifficulty(hash)) {
+             nonce = nonce +1;
+             timestamp = Date.now().toString();
+             hash = this.calculateHash(blockindex, previousHash, data, timestamp).toString();
+        }
+        return new block(blockindex, data, previousHash, hash, timestamp, nonce);
+    }    
     
+
 }
 
 

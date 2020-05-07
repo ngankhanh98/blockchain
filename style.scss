@@ -30,7 +30,6 @@ body {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease 0s;
       outline: none;
-      cursor: pointer;
       display: flex;
       background-color: white;
       //justify-content: center;
@@ -77,7 +76,9 @@ body {
         color: $color-bold;
         font-size: 14px;
       }
-
+      #previousValue{
+        font-size: 12px;
+      }
       .currentHash {
         display: flex;
         margin-top: 0px;
