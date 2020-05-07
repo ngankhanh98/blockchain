@@ -34,7 +34,7 @@ $(function () {
       <div class="block-function">
         
         <div class="nounce">
-          <span class="nounceValue">${lastBlock.nounce}</span>
+          <span class="nounceValue">${lastBlock.nonce}</span>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ $(function () {
       <div class="block-function">
         
         <div class="nounce">
-          <span class="nounceValue">${lastBlock.nounce}</span>
+          <span class="nounceValue">${lastBlock.nonce}</span>
         </div>
       </div>
     </div>

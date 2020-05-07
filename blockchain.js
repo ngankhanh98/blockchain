@@ -4,7 +4,7 @@ import {block} from './block.js';
 export class blockchain{
     constructor() {
         this.chain = [block.intialBlock];
-        this.difficulty = 2;
+        this.difficulty = 3;
     }
     get(){
         return this.chain;

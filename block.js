@@ -1,4 +1,4 @@
-import {blockchain} from './blockchain.js';
+const difficulty = 3;
 
 function isDifficulty(hash) {
   for (var i = 0; i < hash.length; i++) {
@@ -6,7 +6,7 @@ function isDifficulty(hash) {
       break;
     }
   }
-  return i >= blockchain.difficulty;
+  return i >= difficulty;
 }
 
 export class block {
@@ -29,7 +29,7 @@ export class block {
     var hash = CryptoJS.SHA256(blockindex + previousHash + data + timestamp).toString();
     var nonce = 0;
     while (!isDifficulty(hash)) {
-      nonce = nonce +1;
+      nonce = nonce + 1;
       timestamp = Date.now().toString();
       hash = CryptoJS.SHA256(blockindex + previousHash + data + timestamp).toString();
       console.log(`${nonce} + ${hash}`);
