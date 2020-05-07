@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  background-color: #f9f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  body .blockchain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .blockchain .block {
+      margin-bottom: 50px;
+      width: 500px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      background-color: white;
+      flex-direction: column;
+      align-content: flex-end;
+      justify-content: space-around;
+      padding: 50px; }
+      body .blockchain .block .input-group {
+        display: flex;
+        height: fit-content; }
+        body .blockchain .block .input-group input {
+          border-radius: 0 8px 8px 0;
+          border-style: solid;
+          border-width: 1px;
+          border-color: #e1e1e1;
+          border-left: none;
+          width: 500px;
+          padding-left: 10px;
+          font-family: "Manrope", sans-serif; }
+          body .blockchain .block .input-group input:hover {
+            outline: none; }
+          body .blockchain .block .input-group input:focus {
+            outline: none; }
+        body .blockchain .block .input-group .input-group-prepend {
+          background-color: #f5f5f5;
+          border-style: solid;
+          padding: 5px;
+          border-right: none;
+          border-width: 1px;
+          border-radius: 8px 0 0 8px;
+          border-color: #e1e1e1; }
+          body .blockchain .block .input-group .input-group-prepend span {
+            padding: 10px; }
+      body .blockchain .block .hash {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: "Inconsolata", monospace;
+        color: #1fab89;
+        font-size: 14px; }
+      body .blockchain .block .currentHash {
+        display: flex;
+        margin-top: 0px; }
+        body .blockchain .block .currentHash #currentValue {
+          border-radius: 4px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #1fab89;
+          width: fit-content;
+          margin-left: 10px;
+          background-color: #d7fbe8; }
+      body .blockchain .block .footter {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        body .blockchain .block .footter .block-info .block-tag {
+          font-size: 25px; }
+        body .blockchain .block .footter .block-info .timestamp {
+          margin-top: 0;
+          font-size: 10px; }
+        body .blockchain .block .footter .block-function .mine button {
+          border: none;
+          color: #3ec1d3;
+          background-color: white;
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease 0s;
+          outline: none;
+          cursor: pointer; }
+          body .blockchain .block .footter .block-function .mine button:hover {
+            color: white;
+            background-color: #3ec1d3; }
+          body .blockchain .block .footter .block-function .mine button:focus {
+            border: none;
+            outline: none; }
+          body .blockchain .block .footter .block-function .mine button i {
+            margin-top: 0; }
+        body .blockchain .block .footter .block-function .nounce {
+          border-width: 1px;
+          border-style: solid;
+          border-color: gray;
+          background-color: #faf8f8;
+          border-radius: 5px; }
+          body .blockchain .block .footter .block-function .nounce .nounceValue {
+            padding: 10px;
+            color: gray;
+            font-family: "Inconsolata", monospace; }
+      body .blockchain .block:hover {
+        box-shadow: 0px 0px 59px 30px lightgray; }
+  body .new-block {
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px; }
+    body .new-block .input-group {
+      margin-bottom: 30px;
+      display: flex;
+      height: fit-content; }
+      body .new-block .input-group input {
+        border-radius: 0 8px 8px 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #e1e1e1;
+        border-left: none;
+        width: 300px;
+        padding-left: 10px;
+        font-family: "Manrope", sans-serif; }
+        body .new-block .input-group input:hover {
+          outline: none; }
+        body .new-block .input-group input:focus {
+          outline: none; }
+      body .new-block .input-group .input-group-prepend {
+        background-color: #f5f5f5;
+        border-style: solid;
+        padding: 5px;
+        border-right: none;
+        border-width: 1px;
+        border-radius: 8px 0 0 8px;
+        border-color: #e1e1e1; }
+        body .new-block .input-group .input-group-prepend span {
+          padding: 10px; }
+    body .new-block button {
+      background-color: #e84a5f;
+      height: 50px;
+      width: 200px;
+      color: white;
+      border-radius: 25px;
+      border: none;
+      box-shadow: 0px 0px 20px 2px lightgray;
+      transition: all 0.3s ease 0s;
+      outline: none;
+      cursor: pointer; }
+      body .new-block button:hover {
+        box-shadow: 0px 0px 20px 8px lightgray; }
+      body .new-block button:active {
+        transform: translate(0em, 0.75em); }
+        body .new-block button:active::before {
+          transform: translate3d(0, 0, 0em); }
+
+/*# sourceMappingURL=style.css.map */

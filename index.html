@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Manrope:300,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="blockchain">
+    <!-- <div class="block" id="block-0">
+      <div class="input-group data-input">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="data">DATA</span>
+        </div>
+        <input readonly class="form-control" type="text" name="data" aria-describedby="data"
+          value="Welcome to demo blockchain!" />
+      </div>
+      <div class="previousHash">
+        <span>PREVIOUS HASH</span>
+        <span class="hash" id="previousValue">0</span>
+      </div>
+      <div class="currentHash">
+        <span>HASH</span>
+        <div id="currentValue">
+          <span class="hash">000f0a9cbf6db1e982d74ce707a5dfd86bf4890753ccd85cfdb75730ccd3fe19
+          </span>
+        </div>
+      </div>
+      <div class="footter">
+        <div class="block-info">
+          <div class="block-tag">GENESIS BLOCK</div>
+          <div class="timestamp"></div>
+        </div>
+        <div class="block-function">
+          <div class="nounce">
+            <span class="nounceValue">604</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
+  </div>
+  <div class="new-block">
+    <div class="input-group data-input">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="data">DATA</span>
+      </div>
+      <input class="form-control" type="text" name="data" aria-describedby="data"
+        />
+    </div>
+    <button>
+      <i class="fas fa-plus"></i>
+      <span>ADD NEW BLOCK</span>
+    </button>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/sha256.min.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>

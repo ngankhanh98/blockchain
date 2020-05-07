@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+$font-stack: "Manrope", sans-serif;
+$font-code: "Inconsolata", monospace;
+$color-backgroud: #f9f7f7;
+$color-light: #d7fbe8;
+$color-primary: #3ec1d3;
+$color-bold: #1fab89;
+$color-danger: #e84a5f;
+$color-danger-light: #fecea8;
+$color-shadow: lightgray;
+
+body {
+  font-family: $font-stack;
+  font-size: 14px;
+  background-color: $color-backgroud;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .blockchain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .block {
+      margin-bottom: 50px;
+      width: 500px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      background-color: white;
+      //justify-content: center;
+      flex-direction: column;
+      align-content: flex-end;
+      justify-content: space-around;
+      padding: 50px;
+      .input-group {
+        display: flex;
+        height: fit-content;
+        input {
+          border-radius: 0 8px 8px 0;
+          border-style: solid;
+          border-width: 1px;
+          border-color: #e1e1e1;
+          border-left: none;
+          width: 500px;
+          padding-left: 10px;
+          font-family: $font-stack;
+          &:hover {
+            outline: none;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .input-group-prepend {
+          background-color: #f5f5f5;
+          border-style: solid;
+          padding: 5px;
+          border-right: none;
+          border-width: 1px;
+          border-radius: 8px 0 0 8px;
+          border-color: #e1e1e1;
+          span {
+            padding: 10px;
+          }
+        }
+      }
+      .hash {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: $font-code;
+        color: $color-bold;
+        font-size: 14px;
+      }
+
+      .currentHash {
+        display: flex;
+        margin-top: 0px;
+        #currentValue {
+          border-radius: 4px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: $color-bold;
+          width: fit-content;
+          margin-left: 10px;
+          background-color: $color-light;
+        }
+      }
+      .footter {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .block-info {
+          .block-tag {
+            font-size: 25px;
+          }
+          .timestamp {
+            margin-top: 0;
+            font-size: 10px;
+          }
+        }
+        .block-function {
+          .mine {
+            button {
+              border: none;
+              color: $color-primary;
+              background-color: white;
+              border-radius: 50%;
+              height: 45px;
+              width: 45px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+              transition: all 0.3s ease 0s;
+              outline: none;
+              cursor: pointer;
+              &:hover {
+                color: white;
+                background-color: $color-primary;
+              }
+              &:focus {
+                border: none;
+                outline: none;
+              }
+              i {
+                margin-top: 0;
+              }
+            }
+          }
+
+          .nounce {
+            border-width: 1px;
+            border-style: solid;
+            border-color: gray;
+            background-color: rgb(250, 248, 248);
+            border-radius: 5px;
+
+            .nounceValue {
+              padding: 10px;
+              color: gray;
+              font-family: $font-code;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 59px 30px rgba(211, 211, 211, 1);
+      }
+    }
+  }
+  .new-block {
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    .input-group {
+      margin-bottom: 30px;
+      display: flex;
+      height: fit-content;
+      input {
+        border-radius: 0 8px 8px 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #e1e1e1;
+        border-left: none;
+        width: 300px;
+        padding-left: 10px;
+        font-family: $font-stack;
+        &:hover {
+          outline: none;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .input-group-prepend {
+        background-color: #f5f5f5;
+        border-style: solid;
+        padding: 5px;
+        border-right: none;
+        border-width: 1px;
+        border-radius: 8px 0 0 8px;
+        border-color: #e1e1e1;
+        span {
+          padding: 10px;
+        }
+      }
+    }
+    
+    button {
+      background-color: $color-danger;
+      height: 50px;
+      width: 200px;
+      color:white;
+      border-radius: 25px;
+      border: none;
+      box-shadow: 0px 0px 20px 2px rgba(211, 211, 211, 1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+      cursor: pointer;
+      &:hover{
+        box-shadow: 0px 0px 20px 8px rgba(211, 211, 211, 1);
+
+      }
+      &:active {
+        transform: translate(0em, 0.75em);
+        &::before {
+          transform: translate3d(0, 0, 0em);
+        }
+      }
+    }
+  }
+}
