@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Manrope:300,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./assets/logo.svg" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Manrope:300,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-</head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Blockchain Demo" height="80px" style="margin-top: 30px;"> 
+      <span>Blockchain Demo</span>
+    </header>
 
-<body>
-  <div class="blockchain">
-  </div>
-  <div class="new-block">
-    <div class="input-group data-input">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="data">DATA</span>
+    <div class="container">
+      <div class="blockchain"></div>
+      <div class="new-block">
+        <div class="input-group data-input">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="data">DATA</span>
+          </div>
+          <input
+            class="form-control"
+            type="text"
+            name="data"
+            aria-describedby="data"
+          />
+        </div>
+        <button>
+          <i class="fas fa-plus"></i>
+          <span>ADD NEW BLOCK</span>
+        </button>
       </div>
-      <input class="form-control" type="text" name="data" aria-describedby="data"
-        />
     </div>
-    <button>
-      <i class="fas fa-plus"></i>
-      <span>ADD NEW BLOCK</span>
-    </button>
-
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-  <script type="module" src="index.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>

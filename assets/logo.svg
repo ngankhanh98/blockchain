@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206.231" height="181.231" viewBox="0 0 206.231 181.231">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0f4c75;
+      }
+
+      .cls-2 {
+        fill: #3282b8;
+      }
+
+      .cls-3 {
+        filter: url(#Path_2);
+      }
+    </style>
+    <filter id="Path_2" x="0" y="46.828" width="206.231" height="134.403" filterUnits="userSpaceOnUse">
+      <feOffset dy="-10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3" data-name="Group 3" transform="translate(-98 -177)">
+    <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="88" cy="88" r="88" transform="translate(113 177)"/>
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 98, 177)">
+      <path id="Path_2-2" data-name="Path 2" class="cls-2" d="M62.528,101.8c48.665,0,113.7-75.893,113.7-27.228A88.115,88.115,0,0,1,0,74.571C0,25.906,13.863,101.8,62.528,101.8Z" transform="translate(15 13.54)"/>
+    </g>
+  </g>
+</svg>
